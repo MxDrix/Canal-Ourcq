@@ -1,0 +1,80 @@
+ @font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.ttf');
+  font-weight: normal;
+  font-style: normal;
+ }
+body,html{
+	margin:0;
+	padding:0;
+	background-color:#eee;
+	font-family: 'FontAwesome';
+}
+#container{
+	max-width: 1243px;
+    max-height: 591px;	
+	min-width: 1243px;
+    min-height: 591px;
+	margin:auto;
+	position:relative;
+}
+canvas{
+	background-color:rgba(0,0,0,1);
+    box-shadow: 1px 1px 5px 1px rgba(15,15,15,1);
+	max-width: 1243px;
+    max-height: 591px;	
+	min-width: 1243px;
+    min-height: 591px;
+	margin:auto;
+    border: 1px solid rgba(15, 15, 15, 0.2);
+	-webkit-transition: all 1s ease-in;
+	transition: all 1s ease-in;
+}
+canvas#Cloud {
+	background-color:rgba(0,0,0,0);
+    position: absolute;
+    top: 0;
+}
+#jouet{
+    position: absolute;
+	top:0;
+	/*animation: Move 10s linear infinite;
+	-webkit-animation: Move 10s linear infinite;
+	-moz-animation: Move 10s linear infinite;*/
+}
+div#night {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15,15,15,.2);
+    z-index: 55;
+}
+#imgJ2{
+	position:absolute;
+    width: 50px;
+	transform:scaleX(-1);
+	display:none;
+}
+#imgJ1{
+	position:absolute;
+    width: 50px;
+	height: 60px;
+}
+
+.scale{
+	transform: scale(0.9);
+}
+@keyframes Move {
+    0% {top:275px;}
+    100% {  left:100%;top:265px;}
+}
+
+.false{
+	display:none;
+}
+
+.true{
+	display:block;
+}
