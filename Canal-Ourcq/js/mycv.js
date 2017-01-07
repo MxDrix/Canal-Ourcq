@@ -600,11 +600,8 @@ function draw(j,n) {
 	setTimeout(start(20,MyHeight-58,30,"\uf177",0,0),1000);//flèche gauche
 
 	
-		
-	text(MyWidth-5,MyHeight-5,"Mx_DriX",200,"10px Arial","black","right");
-	text(MyWidth/2,55,"Projet I don't know",200,"900 50px Arial","#000","left");
-	text(50,350,"tape Echap pour la nuit, Entrer pour le jour attention le script n'est pas au point",500,"900 50px Arial","#000","left");
-	//sun / moon
+	text(MyWidth/2,50,"Décoder la réalité",200,"900 50px Arial","#eee","left");
+	//sun / moon,
 	var testttt =0;
 	if(n==0,j==1){
 		demiCercle(0,0,40,Math.PI*-1, Math.PI*2,"#f4d264","#f4d264");
@@ -617,7 +614,7 @@ function draw(j,n) {
 		demiCercle(0,0,40,Math.PI*-1, Math.PI*2,"#d8d6d7","#d8d6d7");
 	}
 
-    /* var posX = 250;
+/*     var posX = 250;
 	var Maxpos = 250;
     var vitesseX =2;
     
@@ -626,7 +623,7 @@ function draw(j,n) {
 		var myInterval = setInterval(animate, 1000/30);
 	}else{
 		$("#Cloud").addClass("false").removeClass("true");
-	}	 */	
+	} */	 
 	function animate(){
 		ctxC.clearRect(0, 0, MyWidth, MyHeight);
 		drawShape(posX-250, -150);
