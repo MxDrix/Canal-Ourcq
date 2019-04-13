@@ -1,22 +1,31 @@
  @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.ttf');
+  src: url('font/fonts/fontawesome-webfont.ttf');
   font-weight: normal;
   font-style: normal;
+ }
+ html{
+	position:relative;	 
  }
 body,html{
 	margin:0;
 	padding:0;
-	background-color:#eee;
+	background-color:#000;
 	font-family: 'FontAwesome';
+	width: 100%;
+	height: 100%;
 }
 #container{
 	max-width: 1243px;
     max-height: 591px;	
 	min-width: 1243px;
     min-height: 591px;
-	margin:auto;
-	position:relative;
+    width: 100%;
+    height: 100%;
+	position:relative;    
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 canvas{
 	background-color:rgba(0,0,0,1);
@@ -51,6 +60,10 @@ div#night {
     background: rgba(15,15,15,.2);
     z-index: 55;
 }
+b {
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
 #imgJ2{
 	position:absolute;
     width: 50px;
@@ -62,7 +75,47 @@ div#night {
     width: 50px;
 	height: 60px;
 }
-
+.fleche {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    background: rgba(15,15,15,1);
+    z-index: 16;
+}
+.fleche:hover{
+    background: rgba(235,235,235,.3);
+}
+div#text-bottom {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    color: white;
+    z-index: 11;
+    text-shadow: 0px 1px 0px #c7c8ca, 0px 2px 0px #b1b3b6, 0px 3px 0px #9d9fa2, 0px 4px 0px #8a8c8e, 0px 5px 0px #77787b, 0px 6px 0px #636466, 0px 7px 0px #4d4d4f, 0px 8px 7px #001135;
+    color: rgba(115,115,115,.9);
+    font-size: 20px;
+}
+div#Texte {
+    position: absolute;
+    top: 310px;
+    left: 20px;
+    line-height: 15px;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px #c7c8ca, 0px 2px 0px #b1b3b6, 0px 3px 0px #9d9fa2, 0px 4px 0px #8a8c8e, 0px 5px 0px #77787b, 0px 6px 0px #636466, 0px 7px 0px #4d4d4f, 0px 8px 7px #001135;
+    color: rgba(15,15,15,.8);
+}
+#gauche{
+	left:0;
+    padding-left:10px;
+    box-shadow: 1px 1px 5px 1px rgba(15,15,15,1);
+}
+#droite{
+	right:0;
+    padding-right:10px;
+    box-shadow: -1px 0px 5px 1px rgba(15,15,15,1);
+}
 .scale{
 	transform: scale(0.9);
 }
