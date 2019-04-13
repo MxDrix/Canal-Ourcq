@@ -506,19 +506,19 @@ function draw(j,n) {
 	T =10;
 	F = 900;
 	for(i=0;i<8;i++){					
-		arbuste(F-70, MyHeight-420,.15);	
-		flittleTree(F*10, MyHeight+120*10.5,.15);
-		Tree(F*10,MyHeight+120*10.5,.15);
+		arbuste(F-70, MyHeight-420,.18);	
+		flittleTree(F*10, MyHeight+120*10.5,.18);
+		Tree(F*10,MyHeight+120*10.5,.18);
 		F+=20;			
 	}
 	F=0;
 	for(i=0;i<30;i++){
-    flittleTree(F, MyHeight+120*4.5,.21);
-    flittleTree(F, MyHeight+135*4.5,.21);
+    flittleTree(F, MyHeight+120*4.5,.18);
+    flittleTree(F, MyHeight+135*4.5,.18);
     if(i < 15){
-      flittleTree(F*2, MyHeight+105*4.5,.21);
+      flittleTree(F*2, MyHeight+105*4.5,.18);
     }
-    Tree(F,MyHeight+120*4.6,.21);	
+    Tree(F,MyHeight+120*4.6,.18);	
     F+=200;
 	}		
 	T=0;
@@ -542,20 +542,20 @@ function draw(j,n) {
 	//Lampadaire premier plan 
 	lampadaire(551.5,220,27,13,25,12.5,55,1);
 	//Lampadaire deuxième plan
-	lampadaire(200,220*-3.8,27,13,25,12.5,55,.2);
+	lampadaire(200,260*-3.8,27,13,25,12.5,55,.2);
 	
-	lampadaire(200*10,220*-3.8,27,13,25,12.5,55,.2);
-	lampadaire(200*20,220*-3.8,27,13,25,12.5,55,.2);
-	lampadaire(200*30,220*-3.8,27,13,25,12.5,55,.2);
+	lampadaire(200*10,260*-3.8,27,13,25,12.5,55,.2);
+	lampadaire(200*20,260*-3.8,27,13,25,12.5,55,.2);
+	lampadaire(200*30,260*-3.8,27,13,25,12.5,55,.2);
 	
 	//Lampadaire lumière 
 	if(n == 1 && j == 0){
 		ctx.save();
 		ctx.beginPath();
-		ctx.moveTo(540,55);
-		ctx.lineTo(400,490);
-		ctx.lineTo(740,495);
-		ctx.lineTo(590,55);
+		ctx.moveTo(540,100);
+		ctx.lineTo(400,540);
+		ctx.lineTo(740,545);
+		ctx.lineTo(590,100);
 		ctx.fillStyle = 'rgba(161, 140, 16,.5)';			
 		ctx.fill();  
 		ctx.lineWidth='1'; 
@@ -566,10 +566,10 @@ function draw(j,n) {
 		var light = 0;
 		for(i=0;i<4;i++){			
 			ctx.beginPath();
-			ctx.moveTo(37+light,225);
-			ctx.lineTo(0+light,310);
-			ctx.lineTo(90+light,310);
-			ctx.lineTo(47+light,225);
+			ctx.moveTo(37+light,265);
+			ctx.lineTo(0+light,360);
+			ctx.lineTo(90+light,360);
+			ctx.lineTo(47+light,265);
 			ctx.fillStyle = 'rgba(161, 140, 16,.5)';			
 			ctx.fill();  
 			ctx.lineWidth='1'; 
@@ -957,7 +957,7 @@ function draw(j,n) {
 }
 
 function onWindowResize(){
-	setTimeout(function(){draw(1,0)},100); 		
+	setTimeout(function(){draw(1,0)},10); 		
 }
 function noNianNian(event){
 	if ( event.which == 13) {
@@ -976,12 +976,11 @@ function NianNian(mw,w,mh,h,event){
 	h = (h - mh)/2;
 	m = (w - mw)/2;
 	if(w < mw){
-		$('#night').offset({ top: 0, left: 0 });
+		// $('#night').offset({ top: 0, left: 0 });
 	}else{
-		$('#night').offset({ top: 0, left: 0 });
+		// $('#night').offset({ top: 0, left: 0 });
 	}
-	
-	$('#night').css({'width': MyWidth, 'height': MyHeight});
+	$('#night').css({'width': '100%', 'height': '100%'});
 	
 	// $('#jouet').offset({left: 0,top:255});
 	// $('#jouet').find('#imgJ1').animate({left:mw}, 1500);
